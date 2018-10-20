@@ -1,6 +1,7 @@
 package com.example.sanju.stonepaperscissors;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 
 import java.util.Random;
 import java.util.Scanner;
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (computerInt == 2)
                     computerPlay = "P";
                 else if (computerInt == 3)
+
                     computerPlay = "S";
 
                 //Make player's play uppercase for ease of comparison
@@ -74,6 +77,17 @@ public class MainActivity extends AppCompatActivity {
                     ImageView outp3 = (ImageView) findViewById(R.id.usericon );
                     outp3.setImageDrawable(getResources().getDrawable(R.drawable.user2));
                     score++;
+                    if (computerscore==10 && score<10){
+                        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                        i.putExtra("PC", computerscore);
+                        i.putExtra("USER", score);
+                        startActivity(i);
+                    }else if(computerscore<10 && score==10){
+                        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                        i.putExtra("PC", computerscore);
+                        i.putExtra("USER", score);
+                        startActivity(i);
+                    }
                     points=(TextView) findViewById(R.id.score);
                     points.setText("PC score:  "+Integer.toString(computerscore)+"    "+"Your score:  "+Integer.toString(score)+" ");                    ImageView outp1 = (ImageView) findViewById(R.id.pic1);
                     outp1.setImageDrawable(getResources().getDrawable(R.drawable.scissor));
@@ -83,6 +97,17 @@ public class MainActivity extends AppCompatActivity {
                         re.setText("You win");}
                     else if (computerPlay.equals("P")){
                     computerscore++;
+                    if (computerscore==10 && score<10){
+                        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                        i.putExtra("PC", computerscore);
+                        i.putExtra("USER", score);
+                        startActivity(i);
+                    }else if(computerscore<10 && score==10){
+                        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                        i.putExtra("PC", computerscore);
+                        i.putExtra("USER", score);
+                        startActivity(i);
+                    }
                     ImageView outp = (ImageView) findViewById(R.id.pcicon );
                     outp.setImageDrawable(getResources().getDrawable(R.drawable.computer));
                     ImageView outp3 = (ImageView) findViewById(R.id.usericon );
@@ -133,6 +158,17 @@ public class MainActivity extends AppCompatActivity {
                     re.setText("It's a tie");}
                 else if (computerPlay.equals("S")){
                     computerscore++;
+                    if (computerscore==10 && score<10){
+                        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                        i.putExtra("PC", computerscore);
+                        i.putExtra("USER", score);
+                        startActivity(i);
+                    }else if(computerscore<10 && score==10){
+                        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                        i.putExtra("PC", computerscore);
+                        i.putExtra("USER", score);
+                        startActivity(i);
+                    }
                     ImageView outp = (ImageView) findViewById(R.id.pcicon );
                     outp.setImageDrawable(getResources().getDrawable(R.drawable.computer));
                     ImageView outp3 = (ImageView) findViewById(R.id.usericon );
@@ -150,6 +186,17 @@ public class MainActivity extends AppCompatActivity {
                     ImageView outp3 = (ImageView) findViewById(R.id.usericon );
                     outp3.setImageDrawable(getResources().getDrawable(R.drawable.user2));
                     score++;
+                    if (computerscore==10 && score<10){
+                        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                        i.putExtra("PC", computerscore);
+                        i.putExtra("USER", score);
+                        startActivity(i);
+                    }else if(computerscore<10 && score==10){
+                        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                        i.putExtra("PC", computerscore);
+                        i.putExtra("USER", score);
+                        startActivity(i);
+                    }
                     points=(TextView) findViewById(R.id.score);
                     points.setText("PC score:  "+Integer.toString(computerscore)+"    "+"Your score:  "+Integer.toString(score)+" ");                    ImageView outp1 = (ImageView) findViewById(R.id.pic1);
                     outp1.setImageDrawable(getResources().getDrawable(R.drawable.stone));
@@ -185,7 +232,6 @@ public class MainActivity extends AppCompatActivity {
                 //Make player's play uppercase for ease of comparison
                 personPlay = "S";
                 //See who won. Use nested ifs
-
                 if (personPlay.equals(computerPlay)){
                     ImageView outp = (ImageView) findViewById(R.id.pcicon );
                     outp.setImageDrawable(getResources().getDrawable(R.drawable.computer));
@@ -204,6 +250,17 @@ public class MainActivity extends AppCompatActivity {
                     ImageView outp3 = (ImageView) findViewById(R.id.usericon );
                     outp3.setImageDrawable(getResources().getDrawable(R.drawable.user2));
                     score++;
+                    if (computerscore==10 && score<10){
+                        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                        i.putExtra("PC", computerscore);
+                        i.putExtra("USER", score);
+                        startActivity(i);
+                    }else if(computerscore<10 && score==10){
+                        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                        i.putExtra("PC", computerscore);
+                        i.putExtra("USER", score);
+                        startActivity(i);
+                    }
                     points=(TextView) findViewById(R.id.score);
                     points.setText("PC score:  "+Integer.toString(computerscore)+"    "+"Your score:  "+Integer.toString(score)+" ");                    ImageView outp1 = (ImageView) findViewById(R.id.pic1);
                     outp1.setImageDrawable(getResources().getDrawable(R.drawable.paper));
@@ -213,6 +270,17 @@ public class MainActivity extends AppCompatActivity {
                     re.setText("You win");}
                 else if (computerPlay.equals("R")){
                     computerscore++;
+                    if (computerscore==10 && score<10){
+                        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                        i.putExtra("PC", computerscore);
+                        i.putExtra("USER", score);
+                        startActivity(i);
+                    }else if(computerscore<10 && score==10){
+                        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                        i.putExtra("PC", computerscore);
+                        i.putExtra("USER", score);
+                        startActivity(i);
+                    }
                     ImageView outp = (ImageView) findViewById(R.id.pcicon );
                     outp.setImageDrawable(getResources().getDrawable(R.drawable.computer));
                     ImageView outp3 = (ImageView) findViewById(R.id.usericon );

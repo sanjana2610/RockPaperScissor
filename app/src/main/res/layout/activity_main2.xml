@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity"
+    android:background="@android:color/black">
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/test"
+        android:layout_margin="25dp"
+        android:textSize="35dp"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/holo_green_light"
+        android:fontFamily="@font/acme_regular"
+        />
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pic"
+
+        android:layout_margin="35dp"
+        android:fontFamily="@font/robotoslab_bold"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/holo_green_light"
+        />
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:text="PLAY AGAIN"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_below="@+id/result"
+        android:background="@drawable/rounded_buttton"
+        android:onClick="start"/>
+</RelativeLayout>
